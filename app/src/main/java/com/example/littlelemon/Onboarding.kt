@@ -82,12 +82,12 @@ fun Onboarding(navController: NavController) {
                         if (firstName.isBlank() || lastName.isBlank() || email.isBlank()) {
                             message = "Registration unsuccessful. Please enter all data."
                         } else {
-                            // Save data in SharedPreferences
+                          
                             sharedPreferences.edit()
                                 .putString("first_name", firstName)
                                 .putString("last_name", lastName)
                                 .putString("email", email)
-                                .putBoolean("is_first_time", false)  // ✅ Corrected to Boolean
+                                .putBoolean("is_first_time", false)  
                                 .apply()
 
                             message = "Registration Successful!"
