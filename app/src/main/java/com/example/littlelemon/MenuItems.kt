@@ -19,11 +19,11 @@ import com.bumptech.glide.integration.compose.GlideImage
 
 @Composable
 fun MenuItems(viewModel: MenuViewModel = viewModel()) {
-    val menuItems by viewModel.menuItems.observeAsState(emptyList()) // 🔥 Fetch items from DB
+    val menuItems by viewModel.menuItems.observeAsState(emptyList()) 
 
     LazyColumn(modifier = Modifier.fillMaxSize().padding(16.dp)) {
         items(menuItems) { menuItem ->
-            MenuItemCard(menuItem) // ✅ Display each item using MenuItemCard
+            MenuItemCard(menuItem) 
         }
     }
 }
